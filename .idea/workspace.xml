@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2ef8ce34-f5f8-49a7-a374-f84501caf1b7" name="更改" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/UserController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="spring-beans.schema" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GQL77&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/reasonly/iwc.git&quot;,
+    &quot;accountId&quot;: &quot;320caee8-b8d6-4a45-852c-4b52f99c984f&quot;
+  }
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Java\apache-maven-3.5.4\MyRepository" />
+        <option name="useMavenConfig" value="false" />
+        <option name="userSettingsFile" value="D:\Java\apache-maven-3.5.4\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2lb9msPP0OFD9ffgKqw2YE7WUsy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "JavaScript 调试.login.html.executor": "Run",
+    "Maven.iworkcloud [clean,package].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.App.executor": "Run",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Java/idea/local-workspace/sale_erp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.4862069",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.App.executor": "Run"
+  }
+}]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java\idea\local-workspace\iwc" />
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\java\com\iworkcloud\Filter" />
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\java\com\iworkcloud\util" />
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\java\com\iworkcloud\control" />
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\resources\templates\user" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\resources\templates" />
+      <recent name="D:\Java\idea\local-workspace\iwc\src\main\resources\templates\user" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.iworkcloud.util" />
+      <recent name="com.iworkcloud.config" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn clean package" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="iworkcloud" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.iworkcloud.App" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17890.1" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17890.1" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="2ef8ce34-f5f8-49a7-a374-f84501caf1b7" name="更改" comment="" />
+      <created>1725438072139</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1725438072139</updated>
+      <workItem from="1725438074374" duration="43000" />
+      <workItem from="1725438262810" duration="666000" />
+      <workItem from="1725438971974" duration="487000" />
+      <workItem from="1725443572422" duration="184000" />
+      <workItem from="1725443767535" duration="7664000" />
+      <workItem from="1725495576155" duration="6304000" />
+      <workItem from="1725502759468" duration="92000" />
+      <workItem from="1725503104233" duration="1297000" />
+      <workItem from="1725504550122" duration="2879000" />
+      <workItem from="1725523101949" duration="9531000" />
+      <workItem from="1725542906392" duration="329000" />
+      <workItem from="1725543518931" duration="379000" />
+      <workItem from="1725582645870" duration="681000" />
+      <workItem from="1725583435041" duration="729000" />
+      <workItem from="1725584176918" duration="7364000" />
+      <workItem from="1725591661145" duration="16399000" />
+      <workItem from="1725614816524" duration="4082000" />
+      <workItem from="1725618974365" duration="2028000" />
+      <workItem from="1725621054235" duration="4487000" />
+      <workItem from="1725625754935" duration="856000" />
+      <workItem from="1725670491410" duration="24364000" />
+      <workItem from="1725708295770" duration="6462000" />
+      <workItem from="1725760885585" duration="25008000" />
+      <workItem from="1725798659879" duration="28000" />
+      <workItem from="1725842246691" duration="1758000" />
+      <workItem from="1725844343358" duration="15066000" />
+      <workItem from="1725864912364" duration="721000" />
+      <workItem from="1725866835025" duration="699000" />
+      <workItem from="1725867541306" duration="78000" />
+      <workItem from="1725867691662" duration="317000" />
+      <workItem from="1725868040013" duration="118000" />
+      <workItem from="1725868256167" duration="3115000" />
+      <workItem from="1725878220409" duration="9218000" />
+      <workItem from="1725928034293" duration="18362000" />
+      <workItem from="1726022213334" duration="11668000" />
+      <workItem from="1726108320964" duration="3245000" />
+      <workItem from="1726124857587" duration="2117000" />
+      <workItem from="1726128397892" duration="14692000" />
+      <workItem from="1726187335110" duration="4064000" />
+      <workItem from="1726195976287" duration="585000" />
+      <workItem from="1726196883703" duration="330000" />
+      <workItem from="1726207141001" duration="2380000" />
+      <workItem from="1726283858966" duration="104000" />
+      <workItem from="1726389207082" duration="960000" />
+      <workItem from="1726398213211" duration="1039000" />
+      <workItem from="1726405904567" duration="312000" />
+      <workItem from="1728734726882" duration="1310000" />
+      <workItem from="1732881710836" duration="74000" />
+      <workItem from="1736581123465" duration="327000" />
+      <workItem from="1736835609433" duration="636000" />
+      <workItem from="1736838208968" duration="302000" />
+      <workItem from="1736930082530" duration="25000" />
+      <workItem from="1736930124091" duration="1024000" />
+      <workItem from="1737349234547" duration="605000" />
+      <workItem from="1737352066553" duration="1420000" />
+      <workItem from="1738645340576" duration="13000" />
+      <workItem from="1738648031495" duration="102000" />
+      <workItem from="1738824971602" duration="99000" />
+      <workItem from="1738825827368" duration="33000" />
+      <workItem from="1738910019789" duration="313000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.name" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ClassCastException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
