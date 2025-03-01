@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2ef8ce34-f5f8-49a7-a374-f84501caf1b7" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iworkdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/iworkdb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/AttendanceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/iworkcloud/control/AttendanceController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Java\apache-maven-3.5.4\MyRepository" />
+        <option name="localRepository" value="D:\Java\apache-maven-3.5.4\ku" />
         <option name="useMavenConfig" value="false" />
         <option name="userSettingsFile" value="D:\Java\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
@@ -70,17 +71,17 @@
     "Spring Boot.App.executor": "Run",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Java/idea/local-workspace/sale_erp",
+    "last_opened_file_path": "D:/Java/idea/local-workspace/iwc/iworkdb.sql",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "项目",
-    "project.structure.proportion": "0.15",
+    "project.structure.last.edited": "全局库",
+    "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.4862069",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "Code Search",
     "vue.rearranger.settings.migration": "true",
     "应用程序.App.executor": "Run"
   }
@@ -175,26 +176,6 @@
       <workItem from="1726128397892" duration="14692000" />
       <workItem from="1726187335110" duration="4064000" />
       <workItem from="1726195976287" duration="585000" />
-      <workItem from="1726196883703" duration="330000" />
-      <workItem from="1726207141001" duration="2380000" />
-      <workItem from="1726283858966" duration="104000" />
-      <workItem from="1726389207082" duration="960000" />
-      <workItem from="1726398213211" duration="1039000" />
-      <workItem from="1726405904567" duration="312000" />
-      <workItem from="1728734726882" duration="1310000" />
-      <workItem from="1732881710836" duration="74000" />
-      <workItem from="1736581123465" duration="327000" />
-      <workItem from="1736835609433" duration="636000" />
-      <workItem from="1736838208968" duration="302000" />
-      <workItem from="1736930082530" duration="25000" />
-      <workItem from="1736930124091" duration="1024000" />
-      <workItem from="1737349234547" duration="605000" />
-      <workItem from="1737352066553" duration="1420000" />
-      <workItem from="1738645340576" duration="13000" />
-      <workItem from="1738648031495" duration="102000" />
-      <workItem from="1738824971602" duration="99000" />
-      <workItem from="1738825827368" duration="33000" />
-      <workItem from="1738910019789" duration="313000" />
     </task>
     <servers />
   </component>

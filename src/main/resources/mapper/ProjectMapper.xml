@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.iworkcloud.mapper.ProjectMapper">
+    <resultMap id="BaseResultMap" type="com.iworkcloud.pojo.Project">
+        <result column="project_id" property="projectId" />
+        <result column="project_name" property="projectName" />
+        <result column="project_content" property="projectContent" />
+        <result column="project_state" property="projectState" />
+        <result column="user_id" property="userId" />
+        <result column="project_total" property="projectTotal" />
+    </resultMap>
+    <parameterMap id="Project" type="com.iworkcloud.pojo.Project" />
+
+    <resultMap id="UserResultMap" type="com.iworkcloud.pojo.User">
+        <id property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+    </resultMap>
+    <parameterMap id="User" type="com.iworkcloud.pojo.User" />
+    <sql id="Base_Column_List">
+        t_project.project_id , project_name, project_content, project_state, user_id, project_total
+	</sql>
+    <sql id="Base_Column_List_Without_Id">
+            project_name, project_content, project_state, user_id, project_total
+    </sql>
+    <insert id="insert" parameterMap="Project">
+        insert into t_project (project_name, project_content, project_state, user_id)
+        values (#{projectName},#{projectContent},#{projectState},#{userId})
+    </insert>
+
+    <insert id="addUser">
+        INSERT INTO t_project_attendance (project_id, user_id) values
+        <foreach collection="userIdList" index="index" item="userid" open="(" close=")" separator=") , (">
+            #{projectId},#{userid}
+        </foreach>
+    </insert>
+
+    <update id="update" parameterMap="Project">
+        update t_project
+            set
+        <if test="projectName != null and projectName != ''">
+            project_name = #{projectName},
+        </if>
+        <if test="projectContent != null and projectContent != ''">
+            project_content = #{projectContent},
+        </if>
+        <if test="projectState != null and projectState != ''">
+            project_state = #{projectState},
+        </if>
+        <if test="userId != null and userId != ''">
+            user_id = #{userId}
+        </if>
+        where project_id = #{projectId}
+    </update>
+
+    <delete id="delete" parameterMap="Project">
+        delete from t_project where project_id = #{projectId}
+    </delete>
+
+    <select id="findAll" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />,sum_amount.total_amount
+        from (
+        select project_id, sum(amount) total_amount
+        from t_finance
+        group by project_id
+        ) as sum_amount
+        right join t_project on t_project.project_id = sum_amount.project_id
+    </select>
+
+    <select id="findByEntity" parameterMap="Project" resultMap="BaseResultMap">
+    select <include refid="Base_Column_List" />
+    from t_project
+    <where>
+        <if test="projectId != null and projectId != ''">
+            and project_id = #{projectId}
+        </if>
+        <if test="projectName != null and projectName != ''">
+            and project_name = #{projectName}
+        </if>
+        <if test="projectContent != null and projectContent != ''">
+            and project_content = #{projectContent}
+        </if>
+        <if test="projectState != null and projectState != ''">
+            and project_state = #{projectState}
+        </if>
+        <if test="userId != null and userId != ''">
+            and userId = #{userId}
+        </if>
+    </where>
+    </select>
+
+<!--    通过用户id查询项目信息-->
+    <select id="findByUserId" parameterType="integer" resultMap="BaseResultMap">
+            select t_project.project_id, t_project.project_name, t_project.project_content, t_project.project_state, t_project.user_id, t_project.project_total
+            from t_project join t_project_attendance
+            on t_project.project_id = t_project_attendance.project_id
+            where t_project_attendance.user_id = #{Id}
+    </select>
+
+    <select id="findByPrimaryKey" parameterType="integer" resultMap="BaseResultMap">
+            select <include refid="Base_Column_List" />
+            from t_project
+            where project_id = #{projectId}
+    </select>
+
+    <select id="findByListEntityAndUserId" resultMap="BaseResultMap">
+        select t_project.project_id, project_name, project_content, project_state, t_project_attendance.user_id, project_total
+        from t_project join t_project_attendance
+        on t_project.project_id = t_project_attendance.project_id
+        <where>
+            <if test="Project.projectName != null and Project.projectName != ''">
+                and project_name like concat('%',#{Project.projectName},'%')
+            </if>
+            <if test="Project.projectContent != null and Project.projectContent != ''">
+                and project_content like concat('%',#{Project.projectContent},'%')
+            </if>
+            <if test="Project.projectState != null and Project.projectState != ''">
+                and project_state = #{Project.projectState}
+            </if>
+                and t_project_attendance.user_id = #{id}
+        </where>
+    </select>
+    <select id="findUsersNotInProject" resultMap="UserResultMap">
+        SELECT tu.user_id, tu.user_name
+        FROM t_user tu
+        WHERE tu.user_id NOT IN (
+            SELECT tu.user_id
+            FROM t_user tu
+                     LEFT JOIN t_project_attendance tpa ON tu.user_id = tpa.user_id
+            WHERE project_id = #{projectId}
+        )
+        AND tu.user_authority = #{authority}
+    </select>
+    <select id="findUsersInProject" resultMap="UserResultMap">
+        SELECT tu.user_id, tu.user_name
+        FROM t_user tu
+                 LEFT JOIN t_project_attendance tpa ON tu.user_id = tpa.user_id
+        WHERE project_id = #{projectId} AND tu.user_authority = #{authority}
+    </select>
+    <select id="findByListEntity" resultMap="BaseResultMap">
+        select project_id, project_name, project_content, project_state, user_id,project_total
+        from t_project
+        <where>
+            <if test="Project.projectName != null and Project.projectName != ''">
+                and project_name like concat('%',#{Project.projectName},'%')
+            </if>
+            <if test="Project.projectContent != null and Project.projectContent != ''">
+                and project_content like concat('%',#{Project.projectContent},'%')
+            </if>
+            <if test="Project.projectState != null and Project.projectState != ''">
+                and project_state = #{Project.projectState}
+            </if>
+        </where>
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="integer">
+        delete from t_project where project_id = #{projectId}
+    </delete>
+</mapper>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.iworkcloud.mapper.MeetingMapper">
+
+    <resultMap id="BaseResultMap" type="com.iworkcloud.pojo.Meeting">
+        <result column="meeting_id" property="meetingId" />
+        <result column="meeting_num" property="meetingNum" />
+        <result column="meeting_name" property="meetingName" />
+        <result column="start_time" property="startTime" />
+        <result column="end_time" property="endTime" />
+        <result column="meeting_state" property="meetingState" />
+        <result column="user_id" property="userId" />
+    </resultMap>
+    <parameterMap id="Meeting" type="com.iworkcloud.pojo.Meeting"/>
+
+
+    <sql id="Base_Column_List">
+        meeting_num, meeting_name,start_time,end_time,meeting_state,user_id
+    </sql>
+
+    <insert id="insert" parameterMap="Meeting">
+        insert into t_meeting (meeting_num, meeting_name, start_time, end_time, meeting_state, user_id)
+        values (#{meetingNum},#{meetingName},#{startTime},#{endTime},#{meetingState},#{userId})
+    </insert>
+
+    <insert id="addAttendanceUser">
+        insert into t_meeting_attendance (meeting_id, user_id) values
+        <foreach collection="userIdList" index="index" item="userid" open="(" close=")" separator=") , (">
+            #{meetingId},#{userid}
+        </foreach>
+    </insert>
+
+    <update id="update" parameterMap="Meeting">
+        update
+        t_meeting
+        <trim prefix="set" suffixOverrides=",">
+            <if test="meetingNum!=null and meetingNum!=''">
+                meeting_num = #{meetingNum},
+            </if>
+            <if test="meetingName!=null and meetingName!=''">
+                meeting_name = #{meetingName},
+            </if>
+            <if test="startTime!=null">
+                start_time = #{startTime},
+            </if>
+            <if test="endTime!=null">
+                end_time = #{endTime},
+            </if>
+            <if test="meetingState!=null and meetingState!=''">
+                meeting_state = #{meetingState},
+            </if>
+        </trim>
+        where meeting_id= #{meetingId}
+    </update>
+
+    <update id="updateState" parameterType="Meeting">
+        update
+        t_meeting
+        <trim prefix="set" suffixOverrides=",">
+            <if test="meetingState!=null and meetingState!=''">
+                meeting_state = #{meetingState},
+            </if>
+        </trim>
+        where meeting_id= #{meetingId}
+    </update>
+
+    <delete id="delete" parameterType="Integer">
+        delete from t_meeting where meeting_id= #{meetingId}
+    </delete>
+
+    <select id="findAll" resultMap="BaseResultMap" >
+        select
+            *
+        from t_meeting
+    </select>
+
+    <select id="finduserId" resultType="Integer" >
+        select
+            user_id
+        from t_meeting_attendance where meeting_id = #{meetingId}
+    </select>
+
+    <select id="findNum" parameterType="Integer" resultType="Integer" >
+        select
+        meeting_num
+        from t_meeting
+        where meeting_id = #{meetingId}
+    </select>
+
+    <select id="findByMeeting" parameterMap="Meeting" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from t_meeting
+        <where>
+            <if test="meetingId!=null and meetingId!=''">
+            and    meeting_id = #{meetingId}
+            </if>
+            <if test="meetingNum!=null and meetingNum!=''">
+            and    meeting_num = #{meetingNum}
+            </if>
+            <if test="meetingName!=null and meetingName!=''">
+            and    meeting_name like concat('%',#{meetingName},'%')
+            </if>
+            <if test="meetingState!=null and meetingState!=''">
+            and    meeting_state = #{meetingState}
+            </if>
+            <if test="userId!=null and userId!=''">
+            and    user_id = #{userId}
+            </if>
+        </where>
+    </select>
+
+    <select id="findByAttendanceUser" parameterType="Integer" resultMap="BaseResultMap">
+        select t_meeting.meeting_num,t_meeting.meeting_name,t_meeting.start_time,t_meeting.end_time,t_meeting.meeting_state
+        from t_meeting join t_meeting_attendance
+        on t_meeting.meeting_id = t_meeting_attendance.meeting_id
+        where  t_meeting_attendance.user_id = #{userId}
+    </select>
+
+    <select id="findByMeetingId" parameterType="Integer" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from t_meeting where meeting_id = #{meetingId}
+    </select>
+
+    <select id="findByMeetingNum" parameterType="Integer" resultMap="BaseResultMap">
+        select <include refid="Base_Column_List" />
+        from t_meeting where meeting_num = #{meetingNum}
+    </select>
+</mapper>
